@@ -19,6 +19,15 @@ const Bottols = () => {
         if(bottols.length>0){
             const storedCart=getStoredCart();
         console.log(storedCart)
+        const savedCart=[];
+        for(const id of storedCart){
+            console.log(id);
+            const bottol=bottols.find(bottol=>bottol.id===id);
+            if(bottol){
+                savedCart.push(bottol);
+            }
+        }
+        setCart(savedCart);
         }
     },[bottols])
     const handleAddToCart=bottol=>{

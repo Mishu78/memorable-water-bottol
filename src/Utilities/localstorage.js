@@ -12,11 +12,10 @@ const saveCartToLS=cart=>{
 const addToLS=id=>{
     const cart=getStoredCart();
     cart.push(id);
-<<<<<<< HEAD
+
     saveCartToLS(cart);
 }
 export {addToLS,getStoredCart}
-=======
-}
-export {addToLS}
->>>>>>> 4e9f3798a24dcf6a0a50012f95ef9f014a67cc6d
+
+
+
