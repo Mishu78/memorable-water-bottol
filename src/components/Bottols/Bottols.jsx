@@ -2,7 +2,9 @@ import { useState } from "react";
 import { useEffect } from "react";
 import Bottol from "../Bottol/Bottol";
 import './Bottols.css'
+
 import { addToLS, getStoredCart } from "../../Utilities/localstorage";
+
 const Bottols = () => {
     const [bottols,setBottols]=useState([])
     const [cart,setCart]=useState([]);
@@ -11,6 +13,7 @@ const Bottols = () => {
         .then(res=>res.json())
         .then(data=>setBottols(data))
     },[])
+
     //load cart from local storage
     useEffect(()=>{
         if(bottols.length>0){
