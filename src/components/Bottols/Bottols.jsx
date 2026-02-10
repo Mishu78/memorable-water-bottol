@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import Bottol from "../Bottol/Bottol";
 import './Bottols.css'
 
-import { addToLS, getStoredCart } from "../../Utilities/localstorage";
+import { addToLS, getStoredCart, removeFromLS } from "../../Utilities/localstorage";
 
 const Bottols = () => {
     const [bottols,setBottols]=useState([])
@@ -34,6 +34,11 @@ const Bottols = () => {
         const newCart=[...cart,bottol];
         setCart(newCart);
         addToLS(bottol.id);
+    }
+    const handleRemoveFromCart=id=>{
+//visual cart remove
+//remove from local storage
+removeFromLS(id);
     }
     return (
         <div>
